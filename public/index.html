@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title>boom</title>
+    <style>
+      body, html, #app {
+        height: 100%;
+      }
+      #click-me {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but boom doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app">
+      <button id="click-me">click me</button>
+    </div>
+    <!-- built files will be auto injected -->
+    <script>
+      document.getElementById('click-me').onclick = function () {
+        let boomChildList = [];
+
+        for(let i = 0 ; i < 10; i++){
+          let tempDom = document.createElement("div");
+          tempDom.innerHTML = i;
+          boomChildList.push(tempDom);
+        }
+
+        let boom = new Boom({
+          particleList: boomChildList,
+          container: this
+        });
+        boom.boom()
+      }
+    </script>
+  </body>
+</html>
