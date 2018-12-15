@@ -27,3 +27,7 @@ yarn run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+### idea from
+[https://zhuanlan.zhihu.com/p/47770130](新浪移动大前端)
