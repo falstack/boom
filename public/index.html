@@ -10,11 +10,17 @@
       body, html, #app {
         height: 100%;
       }
+
       #click-me {
         position: absolute;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
+      }
+
+      img {
+        width: 20px;
+        height: 20px;
       }
     </style>
   </head>
@@ -30,9 +36,9 @@
       document.getElementById('click-me').onclick = function () {
         let boomChildList = [];
 
-        for(let i = 0 ; i < 10; i++){
-          let tempDom = document.createElement("div");
-          tempDom.innerHTML = i;
+        for(let i = 1 ; i < 15; i++) {
+          let tempDom = document.createElement("img");
+          tempDom.src = './emoji/' + i + '.png';
           boomChildList.push(tempDom);
         }
 
